@@ -195,10 +195,10 @@ public class GlHelper {
         bottomLeft.transform(posMap);
         Vector4f topRight = new Vector4f(x + width, y, 0, 1);
         topRight.transform(posMap);
-        float x1 = Mth.map(bottomLeft.x(), -1, 1, 0, Minecraft.getInstance().getWindow().getWidth());
-        float y1 = Mth.map(bottomLeft.y(), -1, 1, 0, Minecraft.getInstance().getWindow().getHeight());
-        float x2 = Mth.map(topRight.x(), -1, 1, 0, Minecraft.getInstance().getWindow().getWidth());
-        float y2 = Mth.map(topRight.y(), -1, 1, 0, Minecraft.getInstance().getWindow().getHeight());
+        float x1 = (float)Mth.map(bottomLeft.x(), -1, 1, 0, Minecraft.getInstance().getWindow().getWidth());
+        float y1 = (float)Mth.map(bottomLeft.y(), -1, 1, 0, Minecraft.getInstance().getWindow().getHeight());
+        float x2 = (float)Mth.map(topRight.x(), -1, 1, 0, Minecraft.getInstance().getWindow().getWidth());
+        float y2 = (float)Mth.map(topRight.y(), -1, 1, 0, Minecraft.getInstance().getWindow().getHeight());
         RenderSystem.enableScissor((int)x1, (int)y1, (int)(x2 - x1), (int)(y2 - y1));
     }
 
